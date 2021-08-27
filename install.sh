@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-read -p "Are you sure? Will replace existing configs Y/N " -n 1 -r
+read -p "Are you sure? Will replace existing configs [Y/N] " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
