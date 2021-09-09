@@ -1,25 +1,16 @@
 font pango: Oxanium
 bar {
-   	height 25
-    	font pango: Oxanium
-	status_command i3status
-    	tray_padding 1
-    	strip_workspace_numbers yes
-	bindsym button4 nop
-	bindsym button5 nop
-	position top
-    colors {
-            separator  #7c5295
-            background #301934
-            statusline #7c5295
-              
-            #                   border  background text
-            focused_workspace  #301934 #301934    #bca0dc 
-            active_workspace   #301934 #301934    #b491c8
-            inactive_workspace #301934 #301934    #7c5295
-            urgent_workspace   #301934 #301934    $base08
-            binding_mode       #301934 #301934    #2e3440
-    }
+position top
+status_command i3status
+colors {
+                background #888a85
+                statusline #2F4F4F
+                separator #2F4F4F
+                # colorclass       <border> <background> <text>
+                focused_workspace  #888a85  #888a85     #D3D3D3
+                inactive_workspace #888a85  #888a85     #2F4F4F
+
+        }
 }
 # i3 config file (v4)
 #
@@ -216,3 +207,6 @@ client.unfocused            $bg        $bg         $ia
 client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 default_border pixel 4
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1
+exec --no-startup-id compton --backend glx --paint-on-overlay --vsync opengl-swc

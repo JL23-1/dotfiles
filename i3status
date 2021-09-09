@@ -7,7 +7,7 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
+        colors = false
         interval = 5
         color_good = "#7c5295" # Light green
         color_degraded = "#7c5295" # Light yellow
@@ -18,7 +18,7 @@ general {
 order += "volume master"
 order += "wireless _first_"
 # order += "ethernet _first_"
-# order += "battery all"
+order += "battery all"
 order += "battery 0"
 # order += "disk /"
 # order += "load"
@@ -37,7 +37,7 @@ order += "tztime local"
 
 volume master {
         format = "VOL %volume"
-        format_muted = "%volume"
+        format_muted = "VOL [MUTE] %volume"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
@@ -52,15 +52,15 @@ ethernet _first_ {
 #         format = "%status %percentage"
 # }
 
-#battery 0 {
- #       format = "%status %percentage"
-  #      hide_seconds = true
-  #      integer_battery_capacity = true
-   #     last_full_capacity = true
-  #      status_chr = " +"
-  #      status_bat = ""
-  #      status_full = ""
-#}
+battery 0 {
+       format = "%status %percentage"
+      hide_seconds = true
+      integer_battery_capacity = true
+     last_full_capacity = true
+      status_chr = "BAT+"
+      status_bat = "BAT"
+      status_full = "BAT"
+}
 
 disk "/" {
         format = "%avail"
