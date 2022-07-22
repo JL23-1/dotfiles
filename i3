@@ -9,16 +9,16 @@ bar {
 	bindsym button5 nop
 	position top
     colors {
-            separator  #7c5295
-            background #301934
-            statusline #7c5295
+            separator  #cc71b8
+            background #151717
+            statusline #cc71b8
               
             #                   border  background text
-            focused_workspace  #301934 #301934    #bca0dc 
-            active_workspace   #301934 #301934    #b491c8
-            inactive_workspace #301934 #301934    #7c5295
-            urgent_workspace   #301934 #301934    $base08
-            binding_mode       #301934 #301934    #2e3440
+            focused_workspace  #DEA3B6 #151717    #EFCFD9 
+            active_workspace   #151717 #151717    #EFCFD9
+            inactive_workspace #151717 #151717    #cc71b8
+            urgent_workspace   #151717 #151717    $base08
+            binding_mode       #151717 #151717    #cc71b8
     }
 }
 # i3 config file (v4)
@@ -151,7 +151,6 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -199,10 +198,10 @@ bindsym $mod+shift+s exec maim -s | xclip -selection clipboard -t image/pngS
 exec --no-startup-id unclutter
 bindsym $mod+shift+x exec --no-startup-id i3lock-fancy
 bindsym $mod_shift+p exec click4ever
-set $bg     #2c2c2e
+set $bg     #252928
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #a0afa0
+set $ac     #DEA3B6
 set $tx     #040404
 set $ia     #8f8f8f
 set $be     #8faf9f
